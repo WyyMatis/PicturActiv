@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    container_name: iut-php
+    volumes:
+      - "./:/var/www/html/"
+  web:
+    container_name: iut-web
+    build:
+      context: .
+      dockerfile: docker/web/Dockerfile
+    ports:
+      - "8888:80"
+      - "8887:81"
+    volumes:
+      - "./:/var/www/html/"
+  db:
+    build:
+      context: .
+      dockerfile: docker/db/Dockerfile
+    container_name: iut-db
+    ports:
+      - "3307:3306" # mysql
+    environment:
+      MYSQL_DATABASE: iut
+      MYSQL_USER: iut
+      MYSQL_PASSWORD: iut
+      MYSQL_ROOT_PASSWORD: iut
