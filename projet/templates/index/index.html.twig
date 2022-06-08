@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}PicturActiv'{% endblock %}
+
+{% block javascripts %}
+    <script src="scripts/imageProcessing.js" async></script>
+{% endblock %}
+
+{% block body %}
+
+    <div class="main">
+        <div class="main-content">
+            <h2 id="timeDisplay"></h2>
+            <div class="image-canva">
+                <canvas id="image"></canvas>
+                <div class="title">
+                    <p id="title"></p>
+                </div>
+            </div>
+        </div>
+        <div class="info">
+            <button id="infoButton">?</button>
+            <div id="divPopOver">
+                <p>Cliquer sur l'image afin de modifier la provenance de la lumière</p>
+                <a id="clickableCross">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg white" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                        <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,189 @@
+.baniere
+{
+    text-align: center;
+    background-image: url("/images/galery.jpeg");
+    min-height: 15em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 45%; /*A voir si meilleur solution existe*/
+}
+
+.nav-bar
+{
+    background-color: #271A05;
+    /*min-height: 3.5em;*/
+    display: flex;
+    padding: 1em;
+    vertical-align: center;
+    font-family: "Andale Mono";
+
+
+}
+
+.footer
+{
+    text-align: center;
+    padding: 0.1em;
+    background-color: #271A05;
+    font-family: "Andale Mono";
+    color: white;
+}
+
+footer
+{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height:0;
+}
+body
+{
+    margin: 0;
+}
+html
+{
+    position: relative;
+    min-height: 100%;
+}
+
+
+* {position: relative;
+}
+
+.nav-bar > a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.nav-bar > a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: .25s linear;
+}
+.nav-bar > a:hover:before,
+.nav-bar> a:focus:before {
+    visibility: visible;
+    transform: scaleX(1);
+    color: #FFFFFF;
+}
+.nav-bar a:before {
+    background-color: #FFFFFF;
+}
+
+.main {
+    max-width: 90%;
+    margin: auto;
+}
+
+.main-content {
+    max-width: 50%;
+    margin: auto;
+}
+
+.timer {
+    width: 40%;
+    margin: auto;
+}
+
+.title {
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+}
+
+#title {
+    font-weight: bold;
+}
+
+p {
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 2%;
+}
+
+#infoButton {
+    background-color: #EEEEEE;
+    position: relative;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+button:hover {
+    opacity: 60%;
+}
+
+button:active {
+    box-shadow: none;
+    opacity: initial;
+}
+
+button {
+    width: 40px;
+    height: 40px;
+    outline-style: initial;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 2px 2px darkgrey;
+}
+
+#divPopOver {
+    position: absolute;
+    bottom: 3.5rem;
+    left: 92.5%;
+    transform: translateX(-50%);
+    background-color: #271A05;
+    border-radius: .5rem;
+    padding: 1rem;
+    width: 300px;
+    display: none;
+}
+
+#divPopOver::before {
+    content: '';
+    position: absolute;
+    border: 1rem solid;
+    border-color: #271A05 transparent transparent;
+    bottom: -2rem;
+    left: 81.5%;
+    transform: translateX(-50%);
+}
+
+#clickableCross {
+    position: absolute;
+    left: 93%;
+    bottom: 75%;
+}
+
+#clickableCross:hover {
+    opacity: 75%;
+    cursor: pointer;
+}
+
+.white {
+    color: white;
+}
+
+#divPopOver > p {
+    color: white;
+}
+
+#timeDisplay {
+    text-align: center;
+}
+
+#image {
+    display: block;
+    margin: 0 auto;
+    height: 512px;
+    width: 512px;
+    border-radius: 20px;
+}
